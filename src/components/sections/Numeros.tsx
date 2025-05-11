@@ -401,7 +401,7 @@ function Numeros() {
   return (
     <div
       ref={ref}
-      className="w-screen lg:h-screen flex flex-col justify-center items-center py-8  bg-[#fafafa] relative md:pb-16 overflow-hidden"
+      className="w-screen lg:h-full flex flex-col justify-center items-center py-8   bg-[#fafafa] relative md:pb-16 overflow-hidden"
     >
       <div className="mx-auto  justify-center items-center px-6 text-center lg:px-0">
         {/* Animación de fade-in + slide-up para el título */}

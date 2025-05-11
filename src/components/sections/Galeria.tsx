@@ -1,33 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "../ui/carousel";
 import ScrollVelocity from "../reactbits/scrollvelocity";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import supabase from "../../lib/supabase";
 
-// Sample slide data - replace with your actual images and content
-const slides = [
-  {
-    title: "Programas en vivo",
-    button: "Ver más",
-    src: "https://images.unsplash.com/photo-1593697821048-ce4cb16a2041?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-  },
-  {
-    title: "Entrevistas especiales",
-    button: "Ver más",
-    src: "https://images.unsplash.com/photo-1516981879613-9f5da904015f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
-  },
-  {
-    title: "Eventos comunitarios",
-    button: "Ver más",
-    src: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-  },
-  {
-    title: "Momentos memorables",
-    button: "Ver más",
-    src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-  },
-];
+// Type for the images from Supabase
+interface ImageData {
+  id: string;
+  url: string;
+}
 
 // ScrollVelocity texts
 const scrollTexts = [
@@ -38,6 +21,40 @@ const scrollTexts = [
 function Galeria() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
+  const [images, setImages] = useState<ImageData[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchImages() {
+      try {
+        const { data, error } = await supabase
+          .from("image")
+          .select("id, url")
+          .eq("type", "puravidafm")
+          .order("id", { ascending: false });
+
+        if (error) throw error;
+        setImages(data || []);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to fetch images");
+        console.error("Error fetching images:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchImages();
+  }, []);
+
+  // Convert fetched images to slide format
+  const slides = images.map((image) => ({
+    //title: `Image ${image.id}`,
+    title: "",
+    button: "Ver más",
+    src: image.url,
+    href: "https://www.facebook.com/PuraVida1063", // Adding Facebook URL for the "Ver más" button
+  }));
 
   return (
     <div
@@ -83,8 +100,35 @@ function Galeria() {
           className="max-w-3xl mx-auto mt-20 mb-24 sm:mb-32"
           style={{ maxHeight: "600px" }}
         >
-          <Carousel slides={slides} />
+          {loading ? (
+            <div>Loading images...</div>
+          ) : error ? (
+            <div>Error: {error}</div>
+          ) : slides.length === 0 ? (
+            <div>No images found</div>
+          ) : (
+            <Carousel slides={slides} />
+          )}
         </motion.div>
+
+        {/* Display image ids and urls in a simple list */}
+        {/* {!loading && !error && images.length > 0 && (
+          <div className="mt-8 text-left">
+            <h3 className="text-xl font-bold mb-4">Image IDs and URLs:</h3>
+            <ul className="space-y-2">
+              {images.map((image) => (
+                <li key={image.id} className="border p-3 rounded">
+                  <p>
+                    <strong>ID:</strong> {image.id}
+                  </p>
+                  <p>
+                    <strong>URL:</strong> {image.url}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )} */}
       </div>
     </div>
   );

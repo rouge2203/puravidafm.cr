@@ -47,14 +47,14 @@ function Comentarios() {
       className=" bg-[#fafafa] relative py-8 overflow-hidden w-screen"
       id="comentarios"
     >
-      <div className="mx-auto mb-12">
+      <div className="mx-auto mb-12 px-6">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="text-4xl text-center font-bold tracking-tight  bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
         >
-          Comentarios
+          Nuestros Oyentes
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 50 }}

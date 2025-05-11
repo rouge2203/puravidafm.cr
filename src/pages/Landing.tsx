@@ -18,6 +18,9 @@ import Galeria from "../components/sections/Galeria";
 import NavigationBar from "../components/sections/NavigationBar";
 import Numeros from "../components/sections/Numeros";
 import Comentarios from "../components/sections/Comentarios";
+import DadoresDeVida from "../components/sections/DadoresDeVida";
+import Footer from "../components/sections/Footer";
+
 const Landing = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -36,7 +39,7 @@ const Landing = () => {
   };
 
   return (
-    <div className="w-full h-full overflow-x-hidden">
+    <div className="w-full overflow-hidden">
       <BackgroundGradientAnimation size="75%" className="relative">
         <NavigationBar />
 
@@ -77,7 +80,14 @@ const Landing = () => {
             />
             <div className="flex items-center md:justify-end justify-start md:px-6  mt-4 space-x-1 w-full hover:cursor-pointer hover:scale-105 transition-all duration-300">
               <PiHandsPrayingFill className="text-white text-xl" />
-              <h1 className="text-white  text-sm font-regular">
+              <h1
+                className="text-white text-sm font-regular"
+                onClick={() =>
+                  document
+                    .getElementById("dadoresdevida")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 Dadores de vida
               </h1>
             </div>
@@ -85,10 +95,12 @@ const Landing = () => {
         </div>
       </BackgroundGradientAnimation>
       <GraciaPlus />
+      <Numeros />
       <Galeria />
       <Comentarios />
       <Locutores />
-      <Numeros />
+      <DadoresDeVida />
+      <Footer />
     </div>
   );
 };
