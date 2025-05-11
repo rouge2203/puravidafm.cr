@@ -1,17 +1,8 @@
-import { useState } from "react";
 import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 import logo from "../assets/logo.png";
 import { ContainerTextFlip } from "../components/ui/container-text-flip";
 import { BiSolidRadio } from "react-icons/bi";
-import { FaAppStore } from "react-icons/fa";
-import { SlHome } from "react-icons/sl";
-import { HiOutlinePhoto } from "react-icons/hi2";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
-import { IoMailOutline } from "react-icons/io5";
 import { PiHandsPrayingFill } from "react-icons/pi";
-import { IoMenuSharp } from "react-icons/io5";
-import { IoCloseSharp } from "react-icons/io5";
 import GraciaPlus from "../components/sections/GraciaPlus";
 import Locutores from "../components/sections/Locutores";
 import Galeria from "../components/sections/Galeria";
@@ -22,21 +13,21 @@ import DadoresDeVida from "../components/sections/DadoresDeVida";
 import Footer from "../components/sections/Footer";
 
 const Landing = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
+  // const toggleMobileMenu = () => {
+  //   setMobileMenuOpen(!mobileMenuOpen);
+  // };
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      if (mobileMenuOpen) {
-        setMobileMenuOpen(false);
-      }
-    }
-  };
+  // const scrollToSection = (id: string) => {
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //     if (mobileMenuOpen) {
+  //       setMobileMenuOpen(false);
+  //     }
+  //   }
+  // };
 
   return (
     <div className="w-full overflow-hidden">

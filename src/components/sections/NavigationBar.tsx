@@ -1,7 +1,4 @@
-import React from "react";
 import { useState } from "react";
-import logo from "../assets/logo.png";
-import { BiSolidRadio } from "react-icons/bi";
 import { FaAppStore } from "react-icons/fa";
 import { SlHome } from "react-icons/sl";
 import { HiOutlinePhoto } from "react-icons/hi2";

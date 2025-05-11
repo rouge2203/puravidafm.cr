@@ -1,4 +1,3 @@
-import React from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";

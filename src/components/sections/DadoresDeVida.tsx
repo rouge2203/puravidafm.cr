@@ -1,7 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import dadoresImage from "../../assets/hands_transparent.png";
-import { FaBookBible } from "react-icons/fa6";
 import { FaTools } from "react-icons/fa";
 import { FaCogs } from "react-icons/fa";
 import { FaBroadcastTower } from "react-icons/fa";
@@ -13,7 +12,6 @@ import { FaMobileAlt } from "react-icons/fa";
 import { FaUniversity } from "react-icons/fa";
 import { FaCreditCard } from "react-icons/fa";
 import { FaCopy } from "react-icons/fa";
-import Particles from "../reactbits/particles";
 import { WavyBackground } from "../ui/wavy-background";
 
 function DadoresDeVida() {

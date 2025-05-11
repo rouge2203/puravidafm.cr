@@ -1,4 +1,3 @@
-import React from "react";
 import lobsterlabs_logo from "../../assets/lobsterlabs_logo.png";
 
 function Footer() {

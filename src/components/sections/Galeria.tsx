@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Carousel } from "../ui/carousel";
 import ScrollVelocity from "../reactbits/scrollvelocity";
-import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import supabase from "../../lib/supabase";

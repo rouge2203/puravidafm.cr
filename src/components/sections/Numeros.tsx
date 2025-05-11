@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, lazy, Suspense } from "react";
+import { useRef, lazy } from "react";
 import CountUp from "../reactbits/countUp";
 
 const World = lazy(() =>

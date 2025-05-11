@@ -1,12 +1,4 @@
-import { AnimatedTestimonials } from "../ui/animated-testimonials";
-import { ColourfulText } from "../ui/colourful-text";
-import {
-  FaXTwitter,
-  FaLinkedin,
-  FaTiktok,
-  FaInstagram,
-  FaFacebook,
-} from "react-icons/fa6";
+import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa6";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import supabase from "../../lib/supabase";
