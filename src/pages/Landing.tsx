@@ -13,24 +13,8 @@ import DadoresDeVida from "../components/sections/DadoresDeVida";
 import Footer from "../components/sections/Footer";
 
 const Landing = () => {
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // const toggleMobileMenu = () => {
-  //   setMobileMenuOpen(!mobileMenuOpen);
-  // };
-
-  // const scrollToSection = (id: string) => {
-  //   const element = document.getElementById(id);
-  //   if (element) {
-  //     element.scrollIntoView({ behavior: "smooth" });
-  //     if (mobileMenuOpen) {
-  //       setMobileMenuOpen(false);
-  //     }
-  //   }
-  // };
-
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden" id="landing">
       <BackgroundGradientAnimation size="75%" className="relative">
         <NavigationBar />
 
@@ -43,7 +27,11 @@ const Landing = () => {
           />
           <div className="flex  animate-fade  flex-col md:flex-col md:items-start md:space-x-4 mb-8 items-start space-y-2 justify-center z-50 opacity-85">
             <div
-              onClick={() => alert("No disponible")}
+              onClick={() =>
+                document
+                  .getElementById("app")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="flex space-x-2  items-center justify-center hover:cursor-pointer hover:scale-105 transition-all duration-300"
             >
               <BiSolidRadio className="text-white text-lg md:text-xl" />
@@ -73,11 +61,12 @@ const Landing = () => {
               <PiHandsPrayingFill className="text-white text-xl" />
               <h1
                 className="text-white text-sm font-regular"
-                onClick={() =>
-                  document
-                    .getElementById("dadoresdevida")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => {
+                  const element = document.getElementById("dadoresdevida");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 Dadores de vida
               </h1>

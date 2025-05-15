@@ -64,10 +64,10 @@ function Galeria() {
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8 relative z-10">
         <div className="mx-auto w-full">
           <motion.h2
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
+            initial={{ opacity: 0, y: 100 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl font-bold tracking-tight px-6 text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
           >
             Galería
           </motion.h2>
@@ -80,9 +80,11 @@ function Galeria() {
             >
               <ScrollVelocity
                 texts={scrollTexts}
-                velocity={40}
+                velocity={50}
+                damping={50}
+                stiffness={400}
                 className="text-4xl font-bold text-black/60"
-                numCopies={4}
+                numCopies={6}
               />
             </motion.div>
           </div>

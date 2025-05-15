@@ -95,9 +95,9 @@ export const InfiniteMovingCards = ({
               <span className="relative  z-20 text-sm font-light tracking-wide  text-neutral-800 min-h-[100px] flex text-start text-wrap">
                 {item.quote}
               </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-0.">
-                  <span className="text-sm text-start leading-[1.6] font-normal text-neutral-500 ">
+              <div className="relative z-20 mt-6 flex flex-row items-center  ">
+                <span className="flex flex-col gap-0. ">
+                  <span className="text-sm text-start leading-[1.6]  font-normal text-neutral-500 ">
                     <FaUser className="inline-block mr-2" />
                     {item.name}
                   </span>

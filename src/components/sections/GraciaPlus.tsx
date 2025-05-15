@@ -105,7 +105,7 @@ function GraciaPlus() {
               className="lg:mt-16"
             >
               <a
-                href="https://lobsterlabs.net"
+                href="https://graciaplus.com"
                 target="_blank"
                 className="block cursor-pointer group"
               >
@@ -136,9 +136,13 @@ function GraciaPlus() {
               transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}
               className="mt-8 mb-0"
             >
-              <a
-                href="https://lobsterlabs.net"
-                target="_blank"
+              <div
+                onClick={() => {
+                  const element = document.getElementById("comentarios");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="block cursor-pointer group"
               >
                 <div className="flex items-start space-x-4 group">
@@ -158,7 +162,7 @@ function GraciaPlus() {
                     </p>
                   </div>
                 </div>
-              </a>
+              </div>
             </motion.div>
           </div>
         </section>

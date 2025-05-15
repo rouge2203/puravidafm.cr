@@ -6,21 +6,21 @@ import { useRef } from "react";
 const testimonials = [
   {
     quote:
-      "Pura Vida FM me ha acompañado durante años. ¡Sus programas matutinos son lo mejor para empezar el día con energía! Pura Vida FM me ha acompañado durante años. ¡Sus programas matutinos son lo mejor para empezar el día con energía! Pura Vida FM me ha acompañado durante años. ¡Sus programas matutinos son lo mejor para empezar el día con energía!",
-    name: "Carlos Jiménez",
+      "Pura Vida FM me ha acompañado durante años. ¡Sus programas matutinos son lo mejor para empezar el día con energía! ",
+    name: "Daniel Jiménez",
     title: "Oyente desde 2015",
   },
   {
     quote:
       "La calidad de los locutores y la selección musical es inigualable. No hay otra emisora que combine tan bien información y entretenimiento.",
-    name: "María Rodríguez",
-    title: "Fan de 'Tardes de Música'",
+    name: "Paula Campos",
+    title: "Fan de 'Tardes Pura Vida'",
   },
   {
     quote:
-      "Gracias a los programas culturales de Pura Vida FM, he descubierto eventos locales increíbles. Son una pieza fundamental para nuestra comunidad.",
-    name: "Laura Sánchez",
-    title: "Artista local",
+      "Gracias a los programas de Pura Vida FM, he asistido a un montón de conciertos y eventos con artistas que me gustan. ¡Es una emisora increíble!",
+    name: "Mariana Camacho",
+    title: "Emprendedora",
   },
   {
     quote:
@@ -31,7 +31,7 @@ const testimonials = [
   {
     quote:
       "¡Mi día a día no sería lo mismo sin Pura Vida FM! Los concursos y la interacción con la audiencia nos hacen sentir parte de una gran familia.",
-    name: "Ana Morales",
+    name: "Jeymi Rojas",
     title: "Oyente fiel",
   },
 ];

@@ -4,8 +4,7 @@ import { SlHome } from "react-icons/sl";
 import { HiOutlinePhoto } from "react-icons/hi2";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
-import { IoMailOutline } from "react-icons/io5";
-import { PiHandsPrayingFill } from "react-icons/pi";
+// import { IoMailOutline } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -14,8 +13,8 @@ const navigationItems = [
   {
     name: "Inicio",
     icon: SlHome,
-    sectionId: "home",
-    scrollable: false,
+    sectionId: "landing",
+    scrollable: true,
   },
   {
     name: "App",
@@ -39,14 +38,14 @@ const navigationItems = [
     name: "Donaciones",
     icon: LiaMoneyBillWaveAltSolid,
     sectionId: "donaciones",
-    scrollable: false,
+    scrollable: true,
   },
-  {
-    name: "Contacto",
-    icon: IoMailOutline,
-    sectionId: "contacto",
-    scrollable: false,
-  },
+  // {
+  //   name: "Contacto",
+  //   icon: IoMailOutline,
+  //   sectionId: "contacto",
+  //   scrollable: true,
+  // },
 ];
 
 function NavigationBar() {
@@ -69,7 +68,7 @@ function NavigationBar() {
   return (
     <>
       {/* Mobile Menu */}
-      <nav className="md:hidden w-full h-16 absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-4">
+      <nav className="md:hidden w-full h-16 fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-4 bg-gradient-to-b from-black/15 to-transparent ">
         <button
           onClick={toggleMobileMenu}
           className="text-primary-100 p-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"
@@ -81,11 +80,11 @@ function NavigationBar() {
           )}
         </button>
 
-        <PiHandsPrayingFill className="text-white h-10 w-10 p-2 rounded-full border border-white" />
+        {/* <PiHandsPrayingFill className="text-white h-10 w-10 p-2 rounded-full border border-white" /> */}
       </nav>
 
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-4 right-0 w-3/4 bg-white/95 z-100 rounded-lg shadow-lg">
+        <div className="md:hidden fixed top-16 left-4 w-3/4 bg-white/95 rounded-lg shadow-lg z-100">
           <div className="flex flex-col p-4 space-y-4">
             {navigationItems.map((item, index) => (
               <div

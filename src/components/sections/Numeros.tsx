@@ -409,7 +409,7 @@ function Numeros() {
           initial={{ opacity: 0, y: 100 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
+          className="text-4xl font-bold tracking-tight px-6 text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
         >
           Pura Vida FM
         </motion.h2>
@@ -451,7 +451,7 @@ function Numeros() {
               </h2>
               <CountUp
                 from={0}
-                to={2000}
+                to={150000}
                 className="text-4xl font-bold  tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
               />
             </motion.div>
@@ -461,8 +461,7 @@ function Numeros() {
               transition={{ duration: 1, delay: 0.8 }}
               className="mt-1 pl-6 mb-8 text-lg/8 font-light self-end  w-full lg:w-2/3 text-left leading-6 text-primary-100/80"
             >
-              Nuestros programas son escuchados en cada rincón del planeta y la
-              bendición de Dios se escucha en cada emisión.
+              Oyentes mensuales que escuchan la radio en todo el mundo.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 100 }}
@@ -475,7 +474,7 @@ function Numeros() {
               </h2>
               <CountUp
                 from={0}
-                to={2000}
+                to={8}
                 className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
               />
             </motion.div>
@@ -485,8 +484,7 @@ function Numeros() {
               transition={{ duration: 1, delay: 1.2 }}
               className="mt-1 pl-6 text-lg/8 mb-8 lg:mb-0 font-light self-end  w-full lg:w-2/3 text-left leading-6 text-primary-100/80"
             >
-              Nuestros programas son escuchados en cada rincón del planeta y la
-              bendición de Dios se escucha en cada emisión.
+              Años bendiciendo la vida de miles de personas.
             </motion.p>
           </div>
           {/* World */}
@@ -511,7 +509,7 @@ function Numeros() {
               </h2>
               <CountUp
                 from={0}
-                to={2000}
+                to={100000}
                 className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
               />
             </motion.div>
@@ -521,8 +519,7 @@ function Numeros() {
               transition={{ duration: 1, delay: 1.6 }}
               className="mt-1 text-lg/8 pl-6 self-start font-light mb-8  w-full lg:w-2/3 text-left leading-6 text-primary-100/80"
             >
-              Nuestros programas son escuchados en cada rincón del planeta y la
-              bendición de Dios se escucha en cada emisión.
+              Personas han asistido a nuestros eventos y conciertos.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 100 }}
@@ -535,7 +532,7 @@ function Numeros() {
               </h2>
               <CountUp
                 from={0}
-                to={2000}
+                to={950000}
                 className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
               />
             </motion.div>
@@ -545,8 +542,7 @@ function Numeros() {
               transition={{ duration: 1, delay: 2 }}
               className="mt-1 text-lg/8 pl-6 font-light self-start  w-full lg:w-2/3 text-left leading-6 text-primary-100/80"
             >
-              Nuestros programas son escuchados en cada rincón del planeta y la
-              bendición de Dios se escucha en cada emisión.
+              Seguidores en nuestras redes sociales.
             </motion.p>
           </div>
         </div>

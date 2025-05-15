@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import dadoresImage from "../../assets/hands_transparent.png";
 import { FaTools } from "react-icons/fa";
 import { FaCogs } from "react-icons/fa";
@@ -17,6 +17,13 @@ import { WavyBackground } from "../ui/wavy-background";
 function DadoresDeVida() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const handleCopy = (text: string, methodTitle: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(methodTitle);
+    setTimeout(() => setCopied(null), 2000);
+  };
 
   const dadores = [
     {
@@ -61,29 +68,33 @@ function DadoresDeVida() {
     {
       icon: <FaMobileAlt className="text-2xl text-purple-500" />,
       title: "SINPE Móvil",
-      description: "Envía tu donación al número +506 8888-8888",
-      action: "Donar con SINPE",
+      description: "Envía tu donación al número +506 6351-5599",
+      action: "Copiar número",
+      value: "63515599",
       bg: "bg-emerald-500/98",
     },
     {
       icon: <FaPaypal className="text-2xl text-purple-500" />,
       title: "PayPal",
-      description: "Realiza tu donación segura a través de PayPal",
-      action: "Donar con PayPal",
+      description: "cabinapuravida@gmail.com",
+      action: "Copiar correo",
+      value: "cabinapuravida@gmail.com",
       bg: "bg-purple-500/98",
     },
     {
       icon: <FaUniversity className="text-2xl text-purple-500" />,
-      title: "Banco Nacional",
-      description: "Cuenta IBAN: CR00 0000 0000 0000 0000",
-      action: "Copiar IBAN",
+      title: "Cuenta Cliente",
+      description: "100-01-146-001017-8",
+      action: "Copiar cuenta",
+      value: "100011460010178",
       bg: "bg-blue-500/98",
     },
     {
       icon: <FaCreditCard className="text-2xl text-purple-500" />,
-      title: "BAC Credomatic",
-      description: "Cuenta IBAN: CR00 0000 0000 0000 0000",
+      title: "Cuenta IBAN",
+      description: "CR10 015 114 610 010 01 0179",
       action: "Copiar IBAN",
+      value: "CR10015114610010010179",
       bg: "bg-pink-500/98",
     },
   ];
@@ -111,8 +122,9 @@ function DadoresDeVida() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-6 text-lg/8 font-light px-6 max-w-2xl mx-auto leading-6 text-primary-100/80"
         >
-          Nuestros programas son escuchados en cada rincón del planeta y la
-          bendición de Dios se escucha en cada emisión.
+          Nuestro programa dadores de vida es una iniciativa de la radio para
+          dar mantenimiento a los equipos y unidades móviles que llevan el
+          mensaje de Dios a todo el mundo.
         </motion.p>
         <motion.img
           src={dadoresImage}
@@ -164,17 +176,18 @@ function DadoresDeVida() {
                 blur={10}
                 waveWidth={100}
                 waveOpacity={0.5}
-                colors={["#8b5cf6", "#60a5fa", "#10b981"]}
+                // colors={["#8b5cf6", "#60a5fa", "#10b981"]}
+                colors={["#00BE7F", "#FFFFFF", "#AE4AFF"]}
               />
             </div>
-            <div className="relative z-10 py-8">
+            <div className="relative z-10 py-8" id="donaciones">
               <motion.h3
                 initial={{ opacity: 0, y: 50 }}
                 animate={
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
                 }
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-4xl font-bold tracking-tight px-6 text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
+                className="text-4xl bg-white  rounded-lg font-bold tracking-tight px-6 text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
               >
                 Métodos de Donación
               </motion.h3>
@@ -187,8 +200,16 @@ function DadoresDeVida() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mt-6 text-lg/8 font-light px-6 max-w-2xl mx-auto leading-6 text-primary-100/80"
               >
-                Nuestros programas son escuchados en cada rincón del planeta y
-                la bendición de Dios se escucha en cada emisión.
+                Todas las cuentas se encuentran a nombre de Asociación Grupo
+                Visión Cuenta Especial Dadores.
+                <br />
+                Cédula Jurídica: 3-002-376-972
+                {/* <span className="block mt-2 text-xs text-gray-500">
+                  Todas las cuentas se encuentran a nombre de Asociación Grupo
+                  Visión Cuenta Especial Dadores.
+                  <br />
+                  Cédula Jurídica: 3-002-376-972
+                </span> */}
               </motion.p>
             </div>
           </section>
@@ -201,56 +222,34 @@ function DadoresDeVida() {
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
                 }
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                className={`-mt-10 relative lg:h-44 rounded-2xl shadow-lg px-3 pt-3 pb-10 flex flex-col   hover:shadow-xl transition-shadow duration-300 ${method.bg}`}
+                className={`-mt-10 relative h-48 lg:h-44 rounded-2xl shadow-lg px-3 pt-3 pb-10 flex flex-col hover:shadow-xl transition-shadow duration-300 ${method.bg}`}
               >
-                <div className=" bg-white shadow-lg shadow-white/50 rounded-lg h-10 w-10 flex items-center justify-center">
+                <div className="bg-white shadow-lg shadow-white/50 rounded-lg h-10 w-10 flex items-center justify-center">
                   {method.icon}
                 </div>
-                <h4 className="text-lg font-semibold text-white mb-1">
+                <h4 className="text-xl lg:text-lg   font-semibold text-white mb-1">
                   {method.title}
                 </h4>
-                <p className="text-xs text-white">{method.description}</p>
-                <button className="absolute top-4 right-4 text-xs text-white ">
+                <p className="text-base lg:text-sm text-white">
+                  {method.description}
+                </p>
+                <button
+                  onClick={() => handleCopy(method.value, method.title)}
+                  className="absolute top-4 right-4 text-xs text-white group"
+                >
                   <FaCopy className="text-white text-base" />
+                  <span
+                    className={`absolute -top-8 right-0 bg-black text-white text-xs px-2 py-1 rounded transition-opacity ${
+                      copied === method.title ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    ¡Copiado!
+                  </span>
                 </button>
               </motion.div>
             ))}
           </div>
         </motion.div>
-        {/* <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="w-full mt-16 px-6"
-        >
-          <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text">
-            Métodos de Donación
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {paymentMethods.map((method, index) => (
-              <motion.div
-                key={method.title}
-                initial={{ opacity: 0, y: 50 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
-                }
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="mb-4">{method.icon}</div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  {method.title}
-                </h4>
-                <p className="text-sm text-gray-600 mb-4">
-                  {method.description}
-                </p>
-                <button className="bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity duration-300">
-                  {method.action}
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div> */}
       </div>
     </div>
   );
