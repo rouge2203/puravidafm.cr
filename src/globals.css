@@ -25,6 +25,17 @@
   --color-primary-100: #0a0f5a;
   --color-primary-200: #5c78c9;
 
+  --color-one: #f28123;
+  --color-two: #f7f052;
+  --color-three: #d34e24;
+  --color-four: #38726c;
+  --color-five: #000000;
+  --color-pineapple: #ecaf23;
+  --color-apricot: #e47a24;
+  --color-dark-mango: #d55123;
+  --color-blood-orange: #bf2c20;
+  --color-candy-apple: #951a21;
+
   --animate-scroll: scroll var(--animation-duration, 40s)
     var(--animation-direction, forwards) linear infinite;
 

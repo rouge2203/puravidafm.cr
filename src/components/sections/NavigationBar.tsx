@@ -71,7 +71,7 @@ function NavigationBar() {
       <nav className="md:hidden w-full h-16 fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-4 bg-gradient-to-b from-black/15 to-transparent ">
         <button
           onClick={toggleMobileMenu}
-          className="text-primary-100 p-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"
+          className="text-white/90 p-2 rounded-full bg-apricot/75 hover:bg-white/60 transition-all duration-300"
         >
           {mobileMenuOpen ? (
             <IoCloseSharp className="text-2xl" />
@@ -98,8 +98,8 @@ function NavigationBar() {
                   item.scrollable ? "cursor-pointer" : ""
                 }`}
               >
-                <item.icon className="text-primary-100 text-xl" />
-                <span className="text-primary-100 text-lg tracking-wide">
+                <item.icon className="text-blood-orange text-xl" />
+                <span className="text-candy-apple text-lg tracking-wide">
                   {item.name}
                 </span>
               </div>
@@ -109,7 +109,7 @@ function NavigationBar() {
       )}
 
       {/* Navbar Desktop */}
-      <nav className="animate-fade animate-delay-500 hidden md:flex h-16 w-fit mx-auto px-10 space-x-2 bg-white/40 rounded-full mt-10 absolute top-0 left-0 right-0 z-50 hover:opacity-100 hover:bg-white/50 hover:scale-105 transition-all duration-300 items-center">
+      <nav className="animate-fade animate-delay-500 group hidden md:flex h-16 w-fit mx-auto px-10 space-x-2 bg-two/50 rounded-full mt-10 absolute top-0 left-0 right-0 z-50 hover:opacity-100 hover:bg-gradient-to-r hover:from-one/50 hover:to-two/70 hover:scale-105 transition-all duration-300 items-center hover:shadow-lg hover:shadow-one/30">
         {navigationItems.map((item, index) => (
           <div
             key={index}
@@ -118,10 +118,10 @@ function NavigationBar() {
                 ? () => scrollToSection(item.sectionId)
                 : undefined
             }
-            className="flex items-end justify-center group hover:cursor-pointer hover:scale-105 hover:px-6 hover:py-3 hover:mx-0 hover:-ml-2 rounded-full hover:bg-white/25 transition-all duration-300 px-3 py-2"
+            className="flex justify-center items-center hover:cursor-pointer hover:scale-105 hover:px-6 hover:py-3 hover:mx-0 hover:-ml-2 rounded-full hover:bg-white/25 transition-all duration-300 px-3 py-2"
           >
-            <item.icon className="text-primary-100 text-xl" />
-            <h1 className="text-primary-100/80 text-lg ml-2 tracking-wide font-light hidden group-hover:block leading-none">
+            <item.icon className="text-blood-orange text-xl " />
+            <h1 className="text-white/90 hover:text-blood-orange text-lg ml-2 tracking-tight font-normal hidden group-hover:block leading-none">
               {item.name}
             </h1>
           </div>

@@ -55,7 +55,7 @@ function Locutores() {
             initial={{ opacity: 0, y: 100 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
+            className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5xl"
           >
             Nuestro equipo
           </motion.h2>
@@ -63,7 +63,7 @@ function Locutores() {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="mt-6 text-lg/8 leading-6 text-primary-100/80"
+            className="mt-6 text-lg/8 leading-6 text-gray-600"
           >
             Nuestro equipo de locutores está compuesto por profesionales
             apasionados por la radio, dedicados a brindarte la mejor experiencia
@@ -72,7 +72,7 @@ function Locutores() {
         </div>
         {loading ? (
           <div className="mt-20 text-center">
-            <p className="text-lg text-primary-100/80">Cargando...</p>
+            <p className="text-lg text-gray-600">Cargando...</p>
           </div>
         ) : (
           <ul
@@ -98,12 +98,10 @@ function Locutores() {
                   src={locutor.photo_url}
                   className="mx-auto size-48 rounded-full md:size-56 object-cover"
                 />
-                <h3 className="mt-6 text-xl font-semibold tracking-tight text-primary-200">
+                <h3 className="mt-6 text-xl font-semibold tracking-tight bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text">
                   {locutor.name}
                 </h3>
-                <p className="text-sm/6 text-primary-100/80">
-                  {locutor.description}
-                </p>
+                <p className="text-sm/6 text-gray-600">{locutor.description}</p>
                 <ul role="list" className="mt-6 flex justify-center gap-x-6">
                   {locutor.facebook_link && (
                     <li>
@@ -111,7 +109,7 @@ function Locutores() {
                         href={locutor.facebook_link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary-100/60 hover:text-primary-200 transition-colors duration-300"
+                        className="text-gray-600 hover:text-dark-mango transition-colors duration-300"
                       >
                         <span className="sr-only">Facebook</span>
                         <FaFacebook className="size-5" />
@@ -124,7 +122,7 @@ function Locutores() {
                         href={locutor.instagram_link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary-100/60 hover:text-primary-200 transition-colors duration-300"
+                        className="text-gray-600 hover:text-dark-mango transition-colors duration-300"
                       >
                         <span className="sr-only">Instagram</span>
                         <FaInstagram className="size-5" />
@@ -137,7 +135,7 @@ function Locutores() {
                         href={locutor.tiktok_link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary-100/60 hover:text-primary-200 transition-colors duration-300"
+                        className="text-gray-600 hover:text-dark-mango transition-colors duration-300"
                       >
                         <span className="sr-only">TikTok</span>
                         <FaTiktok className="size-5" />

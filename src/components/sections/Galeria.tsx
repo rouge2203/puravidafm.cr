@@ -67,7 +67,7 @@ function Galeria() {
             initial={{ opacity: 0, y: 100 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl font-bold tracking-tight px-6 text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
+            className="text-4xl font-bold tracking-tight px-6 text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5xl"
           >
             Galería
           </motion.h2>
@@ -83,7 +83,7 @@ function Galeria() {
                 velocity={50}
                 damping={50}
                 stiffness={400}
-                className="text-4xl font-bold text-black/60"
+                className="text-4xl font-bold text-gray-600"
                 numCopies={6}
               />
             </motion.div>

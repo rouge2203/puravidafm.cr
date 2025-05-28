@@ -31,7 +31,7 @@ function GraciaPlus() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="mt-4 hidden md:block text-xl text-primary-100/80 font-semibold text-center md:text-left"
+          className="mt-4 hidden md:block text-xl text-gray-600 font-semibold text-center md:text-left"
         >
           Descarga nuestra nueva aplicación para escuchar la radio en vivo.
         </motion.p>
@@ -55,7 +55,7 @@ function GraciaPlus() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-              className="text-2xl md:text-5xl font-lilita mb-6 text-center md:text-left mt-4 lg:tracking-wider bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text"
+              className="text-2xl md:text-5xl font-display font-bold mb-6 text-center md:text-left mt-4 lg:tracking-tighter  bg-gradient-to-r from-apricot via-pineapple to-dark-mango text-transparent bg-clip-text"
             >
               Bendice tu vida y la de los demás con Gracia Plus
             </motion.h1>
@@ -110,16 +110,16 @@ function GraciaPlus() {
                 className="block cursor-pointer group"
               >
                 <div className="flex items-start space-x-4 group">
-                  <div className="bg-white/10 backdrop-blur-md shadow-sm group-hover:shadow-xl group-hover:shadow-primary-200/80 rounded-lg p-4 group-hover:bg-white/20 transition-all duration-300">
-                    <span className="text-primary-100">
+                  <div className="bg-white/10 backdrop-blur-md shadow-sm group-hover:shadow-xl group-hover:shadow-pineapple/80 rounded-lg p-4 group-hover:bg-white/20 transition-all duration-300">
+                    <span className="text-dark-mango">
                       <IoPhonePortraitOutline className="w-6 h-6" />
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-lilita tracking-wider text-primary-200/80 mb-2">
+                    <h3 className="text-2xl font-display tracking-tight font-bold text-dark-mango mb-2">
                       Conoce más
                     </h3>
-                    <p className="text-primary-100/80 text-base">
+                    <p className="text-gray-600 text-base">
                       Podrás escuchar Pura Vida FM, <br />
                       leer devocionales, y orar con miles <br />
                       de creyentes.
@@ -146,16 +146,16 @@ function GraciaPlus() {
                 className="block cursor-pointer group"
               >
                 <div className="flex items-start space-x-4 group">
-                  <div className="bg-white/10 backdrop-blur-md shadow-sm group-hover:shadow-xl group-hover:shadow-primary-200/80 rounded-lg p-4 group-hover:bg-white/20 transition-all duration-300">
-                    <span className="text-primary-100">
+                  <div className="bg-white/10 backdrop-blur-md shadow-sm group-hover:shadow-xl group-hover:shadow-pineapple/80 rounded-lg p-4 group-hover:bg-white/20 transition-all duration-300">
+                    <span className="text-dark-mango">
                       <IoMdHeartEmpty className="w-6 h-6" />
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-lilita tracking-wider text-primary-200/80 mb-2">
+                    <h3 className="text-2xl font-display tracking-tight font-bold text-dark-mango mb-2">
                       Testimonios
                     </h3>
-                    <p className="text-primary-100/80 text-base">
+                    <p className="text-gray-600 text-base">
                       Descubre lo que dicen nuestros usuarios sobre <br />
                       cómo Gracia Plus ha transformado sus vidas <br />y
                       fortalecido su fe.

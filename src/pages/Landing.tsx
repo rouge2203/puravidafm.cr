@@ -15,7 +15,18 @@ import Footer from "../components/sections/Footer";
 const Landing = () => {
   return (
     <div className="w-full overflow-hidden" id="landing">
-      <BackgroundGradientAnimation size="75%" className="relative">
+      <BackgroundGradientAnimation
+        size="75%"
+        className="relative"
+        gradientBackgroundStart="rgb(234,225,7)"
+        gradientBackgroundEnd="rgb(213,81,35)"
+        firstColor="191,444,32"
+        secondColor="1191,444,32"
+        thirdColor="191,444,32"
+        fourthColor="191,444,32"
+        fifthColor="191,444,32"
+        pointerColor="255,255,255"
+      >
         <NavigationBar />
 
         {/* Hero */}
@@ -39,7 +50,7 @@ const Landing = () => {
                 Escuchar ahora
               </h1>
             </div>
-            <h1 className="text-4xl font-display md:text-5xl font-bold text-white min-w-xs">
+            <h1 className="text-4xl font-display md:text-5xl font-bold min-w-xs text-white">
               Una emisora que te
             </h1>
             <ContainerTextFlip
@@ -54,13 +65,13 @@ const Landing = () => {
                 "ayuda",
                 "y más",
               ]}
-              textClassName="text-primary-100/80 md:text-5xl"
-              className="md:p-2 text-center items-center justify-center flex"
+              textClassName="text-white md:text-5xl"
+              className="md:p-2 text-center items-center justify-center flex bg-gradient-to-r from-one/90 to-two/90"
             />
             <div className="flex items-center md:justify-end justify-start md:px-6  mt-4 space-x-1 w-full hover:cursor-pointer hover:scale-105 transition-all duration-300">
               <PiHandsPrayingFill className="text-white text-xl" />
               <h1
-                className="text-white text-sm font-regular"
+                className="text-white text-base font-regular"
                 onClick={() => {
                   const element = document.getElementById("dadoresdevida");
                   if (element) {

@@ -51,7 +51,7 @@ function Comentarios() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-4xl text-center font-bold tracking-tight  bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
+          className="text-4xl text-center font-bold tracking-tight  bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5xl"
         >
           Nuestros Oyentes
         </motion.h2>
@@ -59,7 +59,7 @@ function Comentarios() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="mt-6 text-lg/8 max-w-2xl leading-6 mx-auto text-center text-primary-100/80"
+          className="mt-6 text-lg/8 max-w-2xl leading-6 mx-auto text-center text-gray-600"
         >
           Las voces de quienes nos acompañan día a día y hacen de Pura Vida FM
           su emisora favorita.

@@ -14,7 +14,7 @@ function Numeros() {
 
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#3A63A8",
+    globeColor: "#4A5565",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
@@ -34,7 +34,8 @@ function Numeros() {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  // const colors = ["#06b6d4", "#3b82f6", "#6366`f1"];
+  const colors = ["#ecaf23", "#e47a24", "#d55123"];
   const sampleArcs = [
     {
       order: 1,
@@ -409,7 +410,7 @@ function Numeros() {
           initial={{ opacity: 0, y: 100 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl font-bold tracking-tight px-6 text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5xl"
+          className="text-4xl font-bold tracking-tight px-6 text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5xl"
         >
           Pura Vida FM
         </motion.h2>
@@ -419,7 +420,7 @@ function Numeros() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-6 text-lg/8 font-light max-w-2xl mx-auto leading-6 text-primary-100/80"
+          className="mt-6 text-lg/8 font-light max-w-2xl mx-auto leading-6 text-gray-600"
         >
           Nuestros programas son escuchados en cada rincón del planeta y la
           bendición de Dios se escucha en cada emisión.
@@ -446,20 +447,20 @@ function Numeros() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
               transition={{ duration: 1, delay: 0.6 }}
             >
-              <h2 className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5">
+              <h2 className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5">
                 +
               </h2>
               <CountUp
                 from={0}
                 to={150000}
-                className="text-4xl font-bold  tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
+                className="text-4xl font-bold  tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5"
               />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="mt-1 pl-6 mb-8 text-lg/8 font-light self-end  w-full lg:w-2/3 text-left leading-6 text-primary-100/80"
+              className="mt-1 pl-6 mb-8 text-lg/8 font-light self-end  w-full lg:w-2/3 text-left leading-6 text-gray-600"
             >
               Oyentes mensuales que escuchan la radio en todo el mundo.
             </motion.p>
@@ -469,20 +470,20 @@ function Numeros() {
               transition={{ duration: 1, delay: 1 }}
               className="   flex self-end w-full lg:w-2/3"
             >
-              <h2 className="text-4xl  font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5">
+              <h2 className="text-4xl  font-bold tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5">
                 +
               </h2>
               <CountUp
                 from={0}
                 to={8}
-                className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
+                className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5"
               />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className="mt-1 pl-6 text-lg/8 mb-8 lg:mb-0 font-light self-end  w-full lg:w-2/3 text-left leading-6 text-primary-100/80"
+              className="mt-1 pl-6 text-lg/8 mb-8 lg:mb-0 font-light self-end  w-full lg:w-2/3 text-left leading-6 text-gray-600"
             >
               Años bendiciendo la vida de miles de personas.
             </motion.p>
@@ -504,20 +505,20 @@ function Numeros() {
               transition={{ duration: 1, delay: 1.4 }}
               className="   flex self-start  w-full lg:w-2/3"
             >
-              <h2 className="text-4xl  font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5">
+              <h2 className="text-4xl  font-bold tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5">
                 +
               </h2>
               <CountUp
                 from={0}
                 to={100000}
-                className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
+                className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5"
               />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 1, delay: 1.6 }}
-              className="mt-1 text-lg/8 pl-6 self-start font-light mb-8  w-full lg:w-2/3 text-left leading-6 text-primary-100/80"
+              className="mt-1 text-lg/8 pl-6 self-start font-light mb-8  w-full lg:w-2/3 text-left leading-6 text-gray-600"
             >
               Personas han asistido a nuestros eventos y conciertos.
             </motion.p>
@@ -525,15 +526,15 @@ function Numeros() {
               initial={{ opacity: 0, y: 100 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
               transition={{ duration: 1, delay: 1.8 }}
-              className="   flex self-start  w-full lg:w-2/3"
+              className="flex self-start  w-full lg:w-2/3"
             >
-              <h2 className="text-4xl  font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5">
+              <h2 className="text-4xl  font-bold tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5">
                 +
               </h2>
               <CountUp
                 from={0}
                 to={950000}
-                className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-purple-500 via-blue-400 to-emerald-500 text-transparent bg-clip-text sm:text-5"
+                className="text-4xl font-bold tracking-tight text-balance bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5"
               />
             </motion.div>
             <motion.p
