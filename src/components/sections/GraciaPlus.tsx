@@ -67,7 +67,7 @@ function GraciaPlus() {
             >
               <a
                 href="https://apps.apple.com/cr/app/gracia-plus/id6742936528?l=en-GB"
-                className="inline-block hover:scale-105 transition-all duration-300 cursor-pointer hover:cursor-pointer hover:shadow-2xl hover:shadow-primary-200/80 "
+                className="inline-block hover:scale-105 transition-all duration-300 cursor-pointer hover:cursor-pointer hover:shadow-2xl hover:shadow-apricot/80 "
               >
                 <img
                   src={appStoreBadge}
@@ -77,7 +77,7 @@ function GraciaPlus() {
               </a>
               <a
                 href="https://play.google.com/store/apps/details?id=com.lobster.graciaplus"
-                className="inline-block hover:scale-105 transition-all duration-300 cursor-pointer hover:cursor-pointer hover:shadow-2xl hover:shadow-primary-200/80 "
+                className="inline-block hover:scale-105 transition-all duration-300 cursor-pointer hover:cursor-pointer hover:shadow-2xl hover:shadow-apricot/80 "
               >
                 <img
                   src={googlePlayBadge}
@@ -111,12 +111,12 @@ function GraciaPlus() {
               >
                 <div className="flex items-start space-x-4 group">
                   <div className="bg-white/10 backdrop-blur-md shadow-sm group-hover:shadow-xl group-hover:shadow-pineapple/80 rounded-lg p-4 group-hover:bg-white/20 transition-all duration-300">
-                    <span className="text-dark-mango">
+                    <span className="text-apricot">
                       <IoPhonePortraitOutline className="w-6 h-6" />
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-display tracking-tight font-bold text-dark-mango mb-2">
+                    <h3 className="text-2xl font-display tracking-tight font-bold bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text mb-2">
                       Conoce más
                     </h3>
                     <p className="text-gray-600 text-base">
@@ -147,12 +147,12 @@ function GraciaPlus() {
               >
                 <div className="flex items-start space-x-4 group">
                   <div className="bg-white/10 backdrop-blur-md shadow-sm group-hover:shadow-xl group-hover:shadow-pineapple/80 rounded-lg p-4 group-hover:bg-white/20 transition-all duration-300">
-                    <span className="text-dark-mango">
+                    <span className="text-apricot">
                       <IoMdHeartEmpty className="w-6 h-6" />
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-display tracking-tight font-bold text-dark-mango mb-2">
+                    <h3 className="text-2xl font-display tracking-tight font-bold bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text mb-2">
                       Testimonios
                     </h3>
                     <p className="text-gray-600 text-base">

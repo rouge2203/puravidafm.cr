@@ -51,7 +51,7 @@ function Comentarios() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-4xl text-center font-bold tracking-tight  bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5xl"
+          className="text-4xl text-center  py-2 font-bold tracking-tight  bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text sm:text-5xl"
         >
           Nuestros Oyentes
         </motion.h2>

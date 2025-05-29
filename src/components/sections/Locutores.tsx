@@ -96,7 +96,7 @@ function Locutores() {
                 <img
                   alt={locutor.name}
                   src={locutor.photo_url}
-                  className="mx-auto size-48 rounded-full md:size-56 object-cover"
+                  className="mx-auto size-48 md:size-56 object-cover"
                 />
                 <h3 className="mt-6 text-xl font-semibold tracking-tight bg-gradient-to-r from-pineapple via-apricot to-dark-mango text-transparent bg-clip-text">
                   {locutor.name}

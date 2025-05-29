@@ -132,11 +132,11 @@ function DadoresDeVida() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           alt="Dadores de Vida"
-          className="w-full h-full lg:w-auto lg:h-auto lg:aspect-video mt-8 object-cover mx-auto"
+          className="w-full h-full lg:max-w-2xl lg:h-auto lg:aspect-video mt-8 object-cover mx-auto"
         />
 
         {/* Dadores de vida */}
-        <div className="w-full mt-8 px-6 lg:container lg:grid lg:grid-cols-2 lg:gap-4 ">
+        <div className="w-full mt-8 px-6 lg:container lg:grid lg:grid-cols-2 lg:gap-4 mx-auto ">
           {dadores.map((dador) => (
             <motion.div
               initial={{ opacity: 0, y: 50 }}

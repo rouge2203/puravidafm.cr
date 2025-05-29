@@ -7,6 +7,7 @@ import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 // import { IoMailOutline } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoCloseSharp } from "react-icons/io5";
+import logo from "../../assets/logo.png";
 
 // Define navigation items
 const navigationItems = [
@@ -68,10 +69,10 @@ function NavigationBar() {
   return (
     <>
       {/* Mobile Menu */}
-      <nav className="md:hidden w-full h-16 fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-4 bg-gradient-to-b from-black/15 to-transparent ">
+      <nav className="md:hidden w-full h-16 fixed top-0 left-0 right-0  flex items-center justify-between px-4 py-4 bg-gradient-to-b from-black/15 to-transparent z-100 ">
         <button
           onClick={toggleMobileMenu}
-          className="text-white/90 p-2 rounded-full bg-apricot/75 hover:bg-white/60 transition-all duration-300"
+          className="text-white/90 shadow-lg shadow-shadow/25  p-2 rounded-full bg-apricot/75 hover:bg-white/60 transition-all duration-300"
         >
           {mobileMenuOpen ? (
             <IoCloseSharp className="text-2xl" />
@@ -84,8 +85,8 @@ function NavigationBar() {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="md:hidden fixed top-16 left-4 w-3/4 bg-white/95 rounded-lg shadow-lg z-100">
-          <div className="flex flex-col p-4 space-y-4">
+        <div className="md:hidden fixed top-16 left-4 w-3/4 bg-gradient-to-r from-pineapple/95   via-apricot/95 to-dark-mango/95 rounded-lg shadow-lg z-100">
+          <div className="flex flex-col p-4 space-y-3">
             {navigationItems.map((item, index) => (
               <div
                 key={index}
@@ -94,16 +95,19 @@ function NavigationBar() {
                     ? () => scrollToSection(item.sectionId)
                     : undefined
                 }
-                className={`flex items-center space-x-3 p-2 hover:bg-white/60 rounded-lg transition-all duration-300 ${
+                className={`flex  shadow-lg shadow-white/25 border border-white/25 items-center space-x-3 p-2 hover:bg-white/60 rounded-lg transition-all duration-300 ${
                   item.scrollable ? "cursor-pointer" : ""
                 }`}
               >
-                <item.icon className="text-blood-orange text-xl" />
-                <span className="text-candy-apple text-lg tracking-wide">
+                <item.icon className="text-white text-xl" />
+                <span className="text-white font-medium text-lg tracking-wide">
                   {item.name}
                 </span>
               </div>
             ))}
+            <div className="flex justify-start items-center">
+              <img src={logo} alt="logo" className="w-14 h-14" />
+            </div>
           </div>
         </div>
       )}

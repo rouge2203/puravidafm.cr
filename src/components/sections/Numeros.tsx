@@ -541,7 +541,7 @@ function Numeros() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 1, delay: 2 }}
-              className="mt-1 text-lg/8 pl-6 font-light self-start  w-full lg:w-2/3 text-left leading-6 text-primary-100/80"
+              className="mt-1 text-lg/8 pl-6 font-light self-start  w-full lg:w-2/3 text-left leading-6 text-gray-600"
             >
               Seguidores en nuestras redes sociales.
             </motion.p>
